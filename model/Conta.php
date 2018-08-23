@@ -3,19 +3,16 @@
 abstract class Conta
 {
 	protected $titular;
-	protected $agencia = 123;
-	protected $numeroConta = 123456;
-	protected $saldo = 500;
-	protected $valor;
+	protected $agencia;
+	protected $saldo = 0;
 
-	public function __construct($titular, $agencia, $numeroConta)
+	public function __construct($titular, $agencia)
 	{
 		$this->titular = $titular;
 		$this->agencia = $agencia;
-		$this->numeroConta = $numeroConta;
 	}
 
-	abstract public function saque($saldo, $valor);
+	abstract public function saque($valor);
 
 	public function getSaldo()
 	{
@@ -25,25 +22,5 @@ abstract class Conta
 	public function setSaldo()
 	{
 		$this->saldo = $saldo;
-	}
-
-	public function getTipoConta()
-	{
-		return $this->tipoconta;
-	}
-
-	public function setTipoConta()
-	{
-		$this->tipoConta = $tipoConta;
-	}
-
-	public function getValor()
-	{
-		return $this->valor;
-	}
-
-	public function setValor()
-	{
-		$this->valor = $valor;
 	}
 }
