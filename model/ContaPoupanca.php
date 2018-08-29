@@ -1,5 +1,6 @@
 <?php
 require_once 'model/Conta.php';
+require_once 'model/Banco.php';
 
 class ContaPoupanca extends Conta
 {
